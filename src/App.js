@@ -7,6 +7,8 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { useRef, useState } from 'react';
 
+
+
 firebase.initializeApp({
   apiKey: "AIzaSyDy9be1QcwKWVNlPilSZuutszB4yeoiNho",
   authDomain: "bdfinal-31008.firebaseapp.com",
@@ -26,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h1>Foro react</h1>
+      <h1>Muro Interactivo React</h1>
         <SignOut />
       </header>
 
@@ -87,9 +89,9 @@ function ChatRoom() {
 
     <form onSubmit={sendMessage}>
 
-      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Escribe Algo" />
 
-      <button type="submit" disabled={!formValue}>Send</button>
+      <button type="submit" disabled={!formValue}>Enviar</button>
 
     </form>
   </>)
